@@ -146,6 +146,35 @@ a txt file for a single (different) stanza,
   to your (newly created) remote repository. 
 \end{itemize}
 
+\noindent\ \\Solution:\\
+The outcome is in https://github.com/Shihongli/550400.homeworkset branch alt1
+Key code:
+mkdir scratch2
+cd scratch2
+git config --global user.name "Shihong Li"
+git config --global user.email lshzju@gmail.com
+git init
+git remote add stanza1 git://github.com/nhlee/550400.stanza1.git
+git remote add stanza2 git://github.com/nhlee/550400.stanza2.git
+git remote add stanza3 git://github.com/nhlee/550400.stanza3.git
+git pull stanza1 master
+vi main.txt
+git add .
+git commit -m "title added"
+git checkout -b alt1
+git pull stanza2 master
+vi main.txt
+git add .
+git commit -m "conflict resolved"
+git pull stanza3 master
+vi main.txt
+git add .
+git commit -m "second conflict resolved"
+git push https://github.com/Shihongli/550400.homeworkset master
+git push https://github.com/Shihongli/550400.homeworkset alt1
+
+
+
 \newpage
 \noindent\textbf{Problem 3 (40 pts):}
 Consider a team of four students, say, $A$, $B$, $C$ and $D$, 
