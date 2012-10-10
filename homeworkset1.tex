@@ -115,7 +115,13 @@ vi main.txt\\
 git add .\\
 git commit -m "D in master is done"\\
 git log --graph --oneline\\
-
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=0.6]{pro.png}
+    \end{center}
+    \caption{The graph for problem 1}
+    \label{fig:branch}
+\end{figure}
 
 
 \vskip.25in
@@ -212,7 +218,8 @@ you are to consider.  So, \emph{be sure to consult IMM}.
 \newpage
 \noindent\ \\Solution:\\
 \textbf{Strategy 1}\\
-Strategy one is to let A B C D do their own work asynchronously. Each worker follows the former one. The process is explained as below: //
+Strategy one is to let A B C D do their own work asynchronously. Each worker follows the former one. The process is explained as below: 
+//
  A initiates a git folder as master to write introduction. After A\textquoteright s done, B will set up a branch named B which has already contained A\textquoteright s work in it. Then B begins to do his work. After B\textquoteright s done, he needs to merge his branch into master and resolve conflicts. Afterwards, C sets up a branch from master named C, and writes timeline in it. After he finishes, C merges his branch into master and resolves conflicts. At last, D sets up a branch from master, and the branch D contains the work of A, B, and C. Then D writes his work. Finally, D merges with master and resolves conflicts. 
 \begin{figure}[h]
     \begin{center}
@@ -224,9 +231,9 @@ Strategy one is to let A B C D do their own work asynchronously. Each worker fol
 \\
 \\
 \textbf{Strategy 2}\\
-In Strategy two, each worker can do his work anytime he wishes. And each of them is responsible for a merge and resolving conflicts. The prcess is explained as below: //
-Someone initiates a git folder as master. Then four branches corresponding to four workers are set up. A works on branch A to write introduction; B works on branch B to write problem statement; C works on branch C to write timeline; D works on branch D to write deliverable. Each of them, after finishing their own work, should pull from master to merge what others have done and then resolve the conflicts. Afterwards, they should push back to master. Finally, on the final note of master branch, we will ask someone to reorganize the sequence and check if there still are any conflicts. The process can be illustrated by the figure below.
+In Strategy two, each worker can do his work anytime he wishes. And each of them is responsible for a merge and resolving conflicts. The prcess is explained as below: 
 \\
+Someone initiates a git folder as master. Then four branches corresponding to four workers are set up. A works on branch A to write introduction; B works on branch B to write problem statement; C works on branch C to write timeline; D works on branch D to write deliverable. Each of them, after finishing their own work, should pull from master to merge what others have done and then resolve the conflicts. Afterwards, they should push back to master. Finally, on the final note of master branch, we will ask someone to reorganize the sequence and check if there still are any conflicts. The process can be illustrated by the figure below.
 \\
 \begin{figure}[h]
     \begin{center}
@@ -236,9 +243,10 @@ Someone initiates a git folder as master. Then four branches corresponding to fo
     \label{fig:branch}
 \end{figure}
 \\
-\\
 These two strategies both work and have their strength and weakness. When considering these two strategies, we treat other things such as the preamble part of main.tex as exogenous. Our endogenous are the length of time, the efficiency of work, and the number of merge conflicts resolution. \\
+\\
 In the first strategy, workers are required to do their work in sequence. The number of merge conflicts resolution is three. So the strength is that it has lighter workload for workers, because they can process fewer conflicts in total. However, the disadvantage is that it can be time-consuming, since each worker has to wait until the former finishes his work. As for the second strategy, workers can start their work at the same time, but each has to do both pull and merge. Another weakness is that someone is required to rearrange the outcome when all of them have finished their work. \\
+\\
 In this case, I would like to recommend Strategy 1 for the following reasons. First, the workload for each person is not very heavy, so there will not be too much delay for each one to finish his work. Therefore, time is not a big issue. Second, resolving conflicts sometimes is not easy. Strategy 1 wins by reducing the workload for all the workers. However, if we are given another case with complicated work for each person, it is possible that I will suggest Strategy 2 to save time.
 that the only things we are concerned about are the merging of four parts: Introduction, Problem
 Statement, Timeline as well as deliverable. We do not focus on the other parts of main.txt which
@@ -265,12 +273,20 @@ discussion.  Instead, formulate the model carefully but concisely in
 your own words.   
 
 \noindent\ \\Solution:\\
+\\
+\textbf{Tennis Rules}\\
 To interpret the problem, I would like to state some rules of tennis first. Rule 1: opponents stand on opposite sides of the court. The player who delivers the ball to start the point is called the server. The player who stands opposite and cross-court from the server is the receiver. Rule 2: the right to serve, receive, choose your side, or give the opponent these choices is decided by a toss of a coin or racquet. If the choice of service or receiver is chosen, the opponent chooses which side to start. Rule 3: the server always calls his score first. If the server wins the first point, he gets a score of 15. Love means zero in tennis. The second point is called 30. The third point is called 45 (now-a-days known as 40) and game is won when the score goes back to love. If the score is 40-40, also known as deuce, one side must win by two points. 
 \\
+\\
+\textbf{Problem Interpretation}\\
 It's is no wonder that a player who is stronger or more skillful than the other has bigger chance of winning. Besides, some psychological factors also play important roles on the results of tennis games. The fairness referred here is about whether the chance of winning is 0.5 assuming other factors are the same. \\
+\\
+\textbf{Model Explanation}\\
 I focus my study on testing the effects of tennis rules on outcomes of tennis games which are played by equally competitive players.\\
+\\
 In my model, variables such as tennis skills, health conditions, and psychological factors, are considered exogenous variables. To make it simple, I assume that we are able to find samples with similar exogenous variables. The endogenous variables are the outcomes of games. For each game, we assign value 1 to the server if he wins otherwise assign a value 0. We are trying to see whether the probability of winning for servers is 0.5. We estimate this probability by summing up the number of servers winning the game and diving it by total number of games. And through enlarging our sample space, we can enhance the preciseness of our according to the Central Limit Theorem, which states that given a sufficiently large sample size from a population with a finite level of variance, the mean of all samples from the same population will be approximately equal to the mean of the population. Then we can confidently treat our estimated probability as the real probability of servers winning the game. By comparing it with 0.5, we can roughly check the fairness of tennis games. To test the model, we can set aside some data and use them to tes if the estimated probabilty works with these testing data.
-
+\\
+\\
 However, this model is quite elementary. I can further develop or redesign it if time permits.
 \vskip0.25in
 \noindent\textbf{Final Remarks about Problem 3 \& Problem 4:} 
