@@ -88,35 +88,35 @@ you are on \texttt{alt} branch. Draw its commit history graph.
 
 
 \noindent\ \\Solution:\\
-Key code for this problem:
-mkdir scratch
-cd scratch
-git init
-vi main.txt
-git add .
-git commit -m "A is done"
-vi main.txt
-git add .
-git commit -m "B is done"
-git branch alt
-git checkout alt
-vi main.txt
-git add .
-git commit -m "X in alt is done"
-git checkout master
-vi main.txt
-git add .
-git commit -m "C in master is done"
-git merge alt
-vi main.txt
-git add .
-git commit -m "merge from alt and conflicts resolved"
-vi main.txt
-git add .
-git commit -m "D in master is done"
-git log --graph --oneline
+Key code for this problem: \\
+mkdir scratch \\
+cd scratch\\
+git init\\
+vi main.txt\\
+git add .\\
+git commit -m "A is done"\\
+vi main.txt\\
+git add .\\
+git commit -m "B is done"\\
+git branch alt\\
+git checkout alt\\
+vi main.txt\\
+git add .\\
+git commit -m "X in alt is done"\\
+git checkout master\\
+vi main.txt\\
+git add .\\
+git commit -m "C in master is done"\\
+git merge alt\\
+vi main.txt\\
+git add .\\
+git commit -m "merge from alt and conflicts resolved"\\
+vi main.txt\\
+git add .\\
+git commit -m "D in master is done"\\
+git log --graph --oneline\\
 
-Figure 1:
+Figure 1:\\
 \begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.6]{pro.png}
@@ -124,7 +124,8 @@ Figure 1:
     \caption{The graph for pro1}
     \label{fig:branch}
 \end{figure}
-
+\\
+\\
 
 \vskip.25in
 \noindent\textbf{Problem 2 (10 pts):}
@@ -148,31 +149,32 @@ a txt file for a single (different) stanza,
 \end{itemize}
 
 \noindent\ \\Solution:\\
-The outcome is in https://github.com/Shihongli/550400.homeworkset branch alt1
-Key code:
-mkdir scratch2
-cd scratch2
-git config --global user.name "Shihong Li"
-git config --global user.email lshzju@gmail.com
-git init
-git remote add stanza1 git://github.com/nhlee/550400.stanza1.git
-git remote add stanza2 git://github.com/nhlee/550400.stanza2.git
-git remote add stanza3 git://github.com/nhlee/550400.stanza3.git
-git pull stanza1 master
-vi main.txt
-git add .
-git commit -m "title added"
-git checkout -b alt1
-git pull stanza2 master
-vi main.txt
-git add .
-git commit -m "conflict resolved"
-git pull stanza3 master
-vi main.txt
-git add .
-git commit -m "second conflict resolved"
-git push https://github.com/Shihongli/550400.homeworkset master
-git push https://github.com/Shihongli/550400.homeworkset alt1
+The outcome is in https://github.com/Shihongli/550400.homeworkset\\
+ branch alt1\\
+Key code:\\
+mkdir scratch2\\
+cd scratch2\\
+git config --global user.name "Shihong Li"\\
+git config --global user.email lshzju@gmail.com\\
+git init\\
+git remote add stanza1 git://github.com/nhlee/550400.stanza1.git\\
+git remote add stanza2 git://github.com/nhlee/550400.stanza2.git\\
+git remote add stanza3 git://github.com/nhlee/550400.stanza3.git\\
+git pull stanza1 master\\
+vi main.txt\\
+git add .\\
+git commit -m "title added"\\
+git checkout -b alt1\\
+git pull stanza2 master\\
+vi main.txt\\
+git add .\\
+git commit -m "conflict resolved"\\
+git pull stanza3 master\\
+vi main.txt\\
+git add .\\
+git commit -m "second conflict resolved"\\
+git push https://github.com/Shihongli/550400.homeworkset master\\
+git push https://github.com/Shihongli/550400.homeworkset alt1\\
 
 
 
@@ -214,6 +216,29 @@ in your model, is the preamble part of \texttt{main.tex} an endogenous
 or exogenous variable?  
 Note also that in addition to this issue, there are other issues that
 you are to consider.  So, \emph{be sure to consult IMM}. 
+
+
+
+\noindent\ \\Solution:\\
+\textbf{Strategy 1}\\
+Strategy one is to let A B C D do their own work asynchronously. Each worker follows the former one. The process is explained as below:// A initiates a git folder as master to write introduction. After A\textquoteright s done, B will set up a branch named B which has already contained A\textquoteright s work in it. Then B begins to do his work. After B\textquoteright s done, he needs to merge his branch into master and resolve conflicts. Afterwards, C sets up a branch from master named C, and writes timeline in it. After he finishes, C merges his branch into master and resolves conflicts. At last, D sets up a branch from master, and the branch D contains the work of A, B, and C. Then D writes his work. Finally, D merges with master and resolves conflicts. 
+
+Figure 1:\\
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[scale=0.6]{s1.png}
+    \end{center}
+    \caption{The graph for Strategy 1}
+    \label{fig:branch}
+\end{figure}
+\\
+\\
+ 
+
+
+
+
+
 
 \vskip0.25in
 \noindent\textbf{Problem 4 (aka.\ Fair Play, 40 pts):}
