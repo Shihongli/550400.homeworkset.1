@@ -265,12 +265,13 @@ discussion.  Instead, formulate the model carefully but concisely in
 your own words.   
 
 \noindent\ \\Solution:\\
+To interpret the problem, I would like to state some rules of tennis first. Rule 1: opponents stand on opposite sides of the court. The player who delivers the ball to start the point is called the server. The player who stands opposite and cross-court from the server is the receiver. Rule 2: the right to serve, receive, choose your side, or give the opponent these choices is decided by a toss of a coin or racquet. If the choice of service or receiver is chosen, the opponent chooses which side to start. Rule 3: the server always calls his score first. If the server wins the first point, he gets a score of 15. Love means zero in tennis. The second point is called 30. The third point is called 45 (now-a-days known as 40) and game is won when the score goes back to love. If the score is 40-40, also known as deuce, one side must win by two points. 
+\\
+It's is no wonder that a player who is stronger or more skillful than the other has bigger chance of winning. Besides, some psychological factors also play important roles on the results of tennis games. The fairness referred here is about whether the chance of winning is 0.5 assuming other factors are the same. \\
+I focus my study on testing the effects of tennis rules on outcomes of tennis games which are played by equally competitive players.\\
+In my model, variables such as tennis skills, health conditions, and psychological factors, are considered exogenous variables. To make it simple, I assume that we are able to find samples with similar exogenous variables. The endogenous variables are the outcomes of games. For each game, we assign value 1 to the server if he wins otherwise assign a value 0. We are trying to see whether the probability of winning for servers is 0.5. We estimate this probability by summing up the number of servers winning the game and diving it by total number of games. And through enlarging our sample space, we can enhance the preciseness of our according to the Central Limit Theorem, which states that given a sufficiently large sample size from a population with a finite level of variance, the mean of all samples from the same population will be approximately equal to the mean of the population. Then we can confidently treat our estimated probability as the real probability of servers winning the game. By comparing it with 0.5, we can roughly check the fairness of tennis games. To test the model, we can set aside some data and use them to tes if the estimated probabilty works with these testing data.
 
-
-
-
-
-
+However, this model is quite elementary. I can further develop or redesign it if time permits.
 \vskip0.25in
 \noindent\textbf{Final Remarks about Problem 3 \& Problem 4:} 
 They are open-ended problems.  However, your scores will be determined
