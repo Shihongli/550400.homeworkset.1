@@ -116,16 +116,7 @@ git add .\\
 git commit -m "D in master is done"\\
 git log --graph --oneline\\
 
-Figure 1:\\
-\begin{figure}[h]
-    \begin{center}
-        \includegraphics[scale=0.6]{pro.png}
-    \end{center}
-    \caption{The graph for pro1}
-    \label{fig:branch}
-\end{figure}
-\\
-\\
+
 
 \vskip.25in
 \noindent\textbf{Problem 2 (10 pts):}
@@ -221,9 +212,8 @@ you are to consider.  So, \emph{be sure to consult IMM}.
 
 \noindent\ \\Solution:\\
 \textbf{Strategy 1}\\
-Strategy one is to let A B C D do their own work asynchronously. Each worker follows the former one. The process is explained as below:// A initiates a git folder as master to write introduction. After A\textquoteright s done, B will set up a branch named B which has already contained A\textquoteright s work in it. Then B begins to do his work. After B\textquoteright s done, he needs to merge his branch into master and resolve conflicts. Afterwards, C sets up a branch from master named C, and writes timeline in it. After he finishes, C merges his branch into master and resolves conflicts. At last, D sets up a branch from master, and the branch D contains the work of A, B, and C. Then D writes his work. Finally, D merges with master and resolves conflicts. 
-
-Figure 1:\\
+Strategy one is to let A B C D do their own work asynchronously. Each worker follows the former one. The process is explained as below: //
+ A initiates a git folder as master to write introduction. After A\textquoteright s done, B will set up a branch named B which has already contained A\textquoteright s work in it. Then B begins to do his work. After B\textquoteright s done, he needs to merge his branch into master and resolve conflicts. Afterwards, C sets up a branch from master named C, and writes timeline in it. After he finishes, C merges his branch into master and resolves conflicts. At last, D sets up a branch from master, and the branch D contains the work of A, B, and C. Then D writes his work. Finally, D merges with master and resolves conflicts. 
 \begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.6]{s1.png}
@@ -233,7 +223,20 @@ Figure 1:\\
 \end{figure}
 \\
 \\
- 
+\textbf{Strategy 2}\\
+In Strategy two, each worker can do his work anytime he wishes. And each of them is responsible for a merge and resolving conflicts. The prcess is explained as below: //
+Someone initiates a git folder as master. Then four branches corresponding to four workers are set up. A works on branch A to write introduction; B works on branch B to write problem statement; C works on branch C to write timeline; D works on branch D to write deliverable. Each of them, after finishing their own work, should pull from master to merge what others have done and then resolve the conflicts. Afterwards, they should push back to master. Finally, on the final note of master branch, we will ask someone to reorganize the sequence and check if there still are any conflicts. The process can be illustrated by the figure below.
+\\
+\\
+    \begin{center}
+        \includegraphics[scale=0.6]{s2.png}
+    \end{center}
+    \caption{The graph for Strategy 2}
+    \label{fig:branch}
+\end{figure}
+\\
+\\
+
 
 
 
