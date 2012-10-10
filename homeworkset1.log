@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 OCT 2012 01:51
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 OCT 2012 02:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -217,7 +217,11 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 (/usr/local/texlive/2012/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(./homeworkset1.aux)
+(./homeworkset1.aux
+
+LaTeX Warning: Label `fig:branch' multiply defined.
+
+)
 \openout1 = `homeworkset1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -235,8 +239,7 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 \c@lstlisting=\count106
-
-(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen114
@@ -317,47 +320,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--169
 
  []
 
-[2] [3] <s1.png, id=25, 416.757pt x 200.9106pt>
+[2] [3] [4] <s1.png, id=29, 416.757pt x 200.9106pt>
 File: s1.png Graphic file (type png)
  <use s1.png>
-Package pdftex.def Info: s1.png used on input line 220.
+Package pdftex.def Info: s1.png used on input line 219.
 (pdftex.def)             Requested size: 250.05612pt x 120.54727pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--227
+<s2.png, id=31, 416.757pt x 255.354pt>
+File: s2.png Graphic file (type png)
+ <use s2.png>
+Package pdftex.def Info: s2.png used on input line 233.
+(pdftex.def)             Requested size: 250.05612pt x 153.21358pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--227
+Underfull \hbox (badness 10000) in paragraph at lines 213--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--240
 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
- [5 <./s1.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
+[5 <./s1.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
+ [6 <./s2.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
  (./homeworkset1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
 Package rerunfilecheck Info: File `homeworkset1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 263.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 276.
  ) 
 Here is how much of TeX's memory you used:
- 6363 strings out of 493488
- 94834 string characters out of 3141326
- 205265 words of memory out of 3000000
- 9620 multiletter control sequences out of 15000+200000
+ 6370 strings out of 493488
+ 94897 string characters out of 3141326
+ 203265 words of memory out of 3000000
+ 9624 multiletter control sequences out of 15000+200000
  7199 words of font info for 26 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 34i,8n,49p,803b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,8n,49p,666b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -366,10 +385,10 @@ r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
 ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
 al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on homeworkset1.pdf (5 pages, 179044 bytes).
+Output written on homeworkset1.pdf (6 pages, 294963 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 74 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
+ 9 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

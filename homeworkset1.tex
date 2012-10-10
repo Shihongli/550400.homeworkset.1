@@ -209,7 +209,7 @@ Note also that in addition to this issue, there are other issues that
 you are to consider.  So, \emph{be sure to consult IMM}. 
 
 
-
+\newpage
 \noindent\ \\Solution:\\
 \textbf{Strategy 1}\\
 Strategy one is to let A B C D do their own work asynchronously. Each worker follows the former one. The process is explained as below: //
@@ -228,6 +228,7 @@ In Strategy two, each worker can do his work anytime he wishes. And each of them
 Someone initiates a git folder as master. Then four branches corresponding to four workers are set up. A works on branch A to write introduction; B works on branch B to write problem statement; C works on branch C to write timeline; D works on branch D to write deliverable. Each of them, after finishing their own work, should pull from master to merge what others have done and then resolve the conflicts. Afterwards, they should push back to master. Finally, on the final note of master branch, we will ask someone to reorganize the sequence and check if there still are any conflicts. The process can be illustrated by the figure below.
 \\
 \\
+\begin{figure}[h]
     \begin{center}
         \includegraphics[scale=0.6]{s2.png}
     \end{center}
@@ -236,13 +237,19 @@ Someone initiates a git folder as master. Then four branches corresponding to fo
 \end{figure}
 \\
 \\
+These two strategies both work and have their strength and weakness. When considering these two strategies, we treat other things such as the preamble part of main.tex as exogenous. Our endogenous are the length of time, the efficiency of work, and the number of merge conflicts resolution. \\
+In the first strategy, workers are required to do their work in sequence. The number of merge conflicts resolution is three. So the strength is that it has lighter workload for workers, because they can process fewer conflicts in total. However, the disadvantage is that it can be time-consuming, since each worker has to wait until the former finishes his work. As for the second strategy, workers can start their work at the same time, but each has to do both pull and merge. Another weakness is that someone is required to rearrange the outcome when all of them have finished their work. \\
+In this case, I would like to recommend Strategy 1 for the following reasons. First, the workload for each person is not very heavy, so there will not be too much delay for each one to finish his work. Therefore, time is not a big issue. Second, resolving conflicts sometimes is not easy. Strategy 1 wins by reducing the workload for all the workers. However, if we are given another case with complicated work for each person, it is possible that I will suggest Strategy 2 to save time.
+that the only things we are concerned about are the merging of four parts: Introduction, Problem
+Statement, Timeline as well as deliverable. We do not focus on the other parts of main.txt which
+might be a short beginning or a conclusion. So those are considered exogenous variables in this
+context. Therefore we ignore the other parts of main.txt than the four core parts.
 
 
 
 
 
-
-
+\newpage
 \vskip0.25in
 \noindent\textbf{Problem 4 (aka.\ Fair Play, 40 pts):}
 Answer the following question:
@@ -256,6 +263,13 @@ You may use the class discussion on this particular
 problem, but you \emph{may not} directly refer to our 
 discussion.  Instead, formulate the model carefully but concisely in 
 your own words.   
+
+\noindent\ \\Solution:\\
+
+
+
+
+
 
 \vskip0.25in
 \noindent\textbf{Final Remarks about Problem 3 \& Problem 4:} 
